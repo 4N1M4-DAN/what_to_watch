@@ -1,4 +1,3 @@
-```python
 import random
 from datetime import datetime
 
@@ -11,6 +10,7 @@ from wtforms.validators import DataRequired, Length, Optional
 
 
 app = Flask(__name__)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
 app.config['SECRET_KEY'] = 'MY_SECRET_KEY'
 
