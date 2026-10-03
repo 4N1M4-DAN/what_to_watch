@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить мнение</title>
+</head>
+<body>
+    <h1>Добавить новое мнение</h1>
+
+    {% for message in get_flashed_messages() %}
+        <p style="color: red;">{{ message }}</p>
+    {% endfor %}
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.title.label }}<br>
+            {{ form.title(size=32) }}
+        </p>
+        <p>
+            {{ form.text.label }}<br>
+            {{ form.text(rows=5, cols=40) }}
+        </p>
+        <p>
+            {{ form.source.label }}<br>
+            {{ form.source(size=32) }}
+        </p>
+        <p>
+            {{ form.submit() }}
+        </p>
+    </form>
+
+    <hr>
+    <a href="{{ url_for('main.index_view') }}">На главную</a>
+</body>
+</html>

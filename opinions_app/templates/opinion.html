@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ opinion.title }}</title>
+</head>
+<body>
+    <h1>{{ opinion.title }}</h1>
+    <p>{{ opinion.text }}</p>
+    <p><b>Источник:</b> {{ opinion.source }}</p>
+    <p><b>Добавил:</b> {{ opinion.added_by }}</p>
+    <hr>
+    <a href="{{ url_for('main.index_view') }}">На главную</a> |
+    <a href="{{ url_for('main.add_opinion_view') }}">Добавить еще мнение</a>
+</body>
+</html>
